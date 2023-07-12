@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+}
+
+.container {
+  width: 90vw;
+  min-height: 90vh;
+  background-color: #0e0d0d;
+  border-radius: 2%;
+  margin: 5% auto;
+  padding: 2%;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+.img .box-img {
+  max-width: 50%;
+  position: relative;
+}
+
+#EditImg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: blue;
+}
+
+.img .upload label {
+  border: 2px dashed white;
+  padding: 10%;
+  cursor: pointer;
+}
+
+.img .upload input {
+  display: none;
+}
+
+.img .beforAfter {
+  margin: 1rem 0;
+  width: 50%;
+  display: none;
+  position: relative;
+}
+
+.img .beforAfter span {
+  position: absolute;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20%;
+  cursor: pointer;
+  animation: all 2s;
+  background-color: rgb(22, 180, 88);
+}
+
+.img .beforAfter .befor {
+  left: 0;
+}
+
+.img .beforAfter .after {
+  right: 0;
+}
+
+.img .beforAfter span:hover {
+  transform: scale(1.1);
+}
+
+.fillters {
+  direction: rtl;
+  padding: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.fillters ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.fillters ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.fillters ul li:last-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 0.1rem;
+}
+
+.fillters ul li input,
+.fillters a,
+.fillters span {
+  cursor: pointer;
+}
+
+.fillters a,
+.fillters span {
+  padding: 5px 10px;
+  background-color: rgb(10, 141, 65);
+  color: white;
+  text-decoration: none;
+  border-radius: 5%;
+  border: none;
+  animation: all 2s;
+}
+
+.fillters a:hover,
+.fillters span:hover {
+  opacity: 0.5;
+}
+
+.fillters a:focus,
+.fillters span:focus {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 758px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .img .box-img {
+    max-width: 75%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
