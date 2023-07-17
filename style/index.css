@@ -51,14 +51,14 @@ body {
   display: none;
 }
 
-.img .beforAfter {
+.img .beforeAfter {
   margin: 1rem 0;
   width: 50%;
   display: none;
   position: relative;
 }
 
-.img .beforAfter span {
+.img .beforeAfter span {
   position: absolute;
   padding: 0.35rem 0.75rem;
   border-radius: 20%;
@@ -67,15 +67,15 @@ body {
   background-color: rgb(22, 180, 88);
 }
 
-.img .beforAfter .befor {
+.img .beforeAfter .before {
   left: 0;
 }
 
-.img .beforAfter .after {
+.img .beforeAfter .after {
   right: 0;
 }
 
-.img .beforAfter span:hover {
+.img .beforeAfter span:hover {
   transform: scale(1.1);
 }
 

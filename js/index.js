@@ -15,9 +15,9 @@ const newImg = document.getElementById("newImg");
 const canvas = document.getElementById("EditImg");
 var ctx = canvas.getContext("2d");
 const upload = document.getElementById("upload");
-const beforAfter = document.getElementById("beforAfter");
+const beforeAfter = document.getElementById("beforeAfter");
 const after = document.getElementById("after");
-const befor = document.getElementById("befor");
+const before = document.getElementById("before");
 
 let checkUpload = true;
 let closeModule = true;
@@ -96,7 +96,7 @@ const resetImg = () => {
   blur.value = 0;
   ctx.filter = "none";
   editimg();
-  beforAfter.style.display = "none";
+  beforeAfter.style.display = "none";
 };
 
 const editimg = (d, w = newImg.width, h = newImg.height) => {
@@ -159,7 +159,7 @@ download.addEventListener("click", (e) => {
 fillters.forEach((filter) => {
   filter.addEventListener("input", () => {
     afterClick();
-    beforAfter.style.display = "block";
+    beforeAfter.style.display = "block";
     editimg();
   });
 });
@@ -169,13 +169,13 @@ window.addEventListener("resize", editimg);
 const afterClick = (e) => {
   newImg.style.display = "hidden";
   canvas.style.display = "block";
-  befor.style.opacity = 0.5;
+  before.style.opacity = 0.5;
   after.style.opacity = 1;
 };
 after.addEventListener("click", afterClick);
-befor.addEventListener("click", (e) => {
+before.addEventListener("click", (e) => {
   newImg.style.display = "block";
   canvas.style.display = "none";
-  befor.style.opacity = 1;
+  before.style.opacity = 1;
   after.style.opacity = 0.5;
 });
